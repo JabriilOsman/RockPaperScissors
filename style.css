@@ -1,0 +1,18 @@
+.h1{
+    display: flex;
+    justify-content: center; 
+  }
+
+  .container{
+    display: flex;  
+    justify-content: center;
+  }
+
+  button{
+    display: block;
+    width: 20%;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+  }

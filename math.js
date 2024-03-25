@@ -17,19 +17,19 @@ const knapp3 = document.getElementById("scissor");
 knapp1.addEventListener("click", () => {
         playerSelection= knapp1.innerText;
         console.log(playerSelection);
-        playround();
+        PlayingSingleGame();
       });
 
 knapp2.addEventListener("click", () => {
         playerSelection= knapp2.innerText;
         console.log(playerSelection);
-        playround();
+        PlayingSingleGame();
       });
 
 knapp3.addEventListener("click", () => {
         playerSelection= knapp3.innerText;
         console.log(playerSelection);
-        playround();
+        PlayingSingleGame();
       });
 
 
@@ -45,11 +45,7 @@ function getComputerChoice(){
 
 
         
-        return computervalg;
-
-        
-
-        
+        return computervalg;  
 
 }
 
@@ -74,6 +70,7 @@ function checkWinner(playerSelection, computerSelection){
 
 function PlayingSingleGame(playerSelection, computerSelection){
         const result = checkWinner(playerSelection, computerSelection);
+        console.log("test")
         if (result == "Tie"){
                 return "It is a tie"
         }
