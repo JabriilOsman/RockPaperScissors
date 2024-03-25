@@ -42,12 +42,12 @@ const valg = ["rock", "paper", "scissor"];
 
 function getComputerChoice(){
         const computervalg = valg [Math.floor(Math.random()* valg.length)];
-
-
-        
+        console.log(computervalg);
         return computervalg;  
+        
 
 }
+getComputerChoice();
 
 
 
@@ -69,8 +69,8 @@ function checkWinner(playerSelection, computerSelection){
 }
 
 function PlayingSingleGame(playerSelection, computerSelection){
+        
         const result = checkWinner(playerSelection, computerSelection);
-        console.log("test")
         if (result == "Tie"){
                 return "It is a tie"
         }
@@ -83,6 +83,25 @@ function PlayingSingleGame(playerSelection, computerSelection){
 
 }
 
+
+
+function getPlayerChoice(){ 
+        let checkInput = false;
+        while(checkInput == false) {
+                const choice = prompt("Rock Paper Scissor");
+                if (choice == null){
+                        continue;
+                }
+                const choiceInLower = choice.toLowerCase();
+                if (valg.includes(choiceInLower)){
+                        checkInput= true;
+                        return choiceInLower;
+                }
+                
+
+        }
+
+}
 
 
 
